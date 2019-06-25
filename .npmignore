@@ -1,0 +1,15 @@
+# standard ignores
+
+node_modules/
+karma.conf.js
+spec/
+
+.*
+
+# ignore src
+
+src/**/*
+
+# override above and include ts files
+
+!src/**/*.ts
