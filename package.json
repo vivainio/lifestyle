@@ -1,6 +1,6 @@
 {
   "name": "lifestyle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Objects life cycle manager (e.g. for Angular)",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
