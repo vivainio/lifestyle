@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/lifestyle.svg)](https://badge.fury.io/js/lifestyle)
+
 # lifestyle
 
 JS object life cycle management helper. Best used with Angular. 
