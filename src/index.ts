@@ -2,7 +2,7 @@ type Disposer = () => void;
 
 const _disposers = new WeakMap<Object, Disposer[]>();
 
-function addOrSet(obj: Object, disp: Disposer) {
+function addOrSet(obj: Object, disp: Disposer): void {
   const ds = _disposers.get(obj);
   if (!ds) {
     _disposers.set(obj, [disp]);
@@ -11,11 +11,13 @@ function addOrSet(obj: Object, disp: Disposer) {
   }
 }
 
-export function ldisposer(obj: Object, disp: Disposer) {
+/** Register disposer function for later disposal by lstop(), associated with obj */
+export function ldisposer(obj: Object, disp: Disposer): void {
   addOrSet(obj, disp);
 }
 
-export function lstop(obj: Object) {
+/** Dispose all resources associated with obj */
+export function lstop(obj: Object): void {
   const ds = _disposers.get(obj);
   if (!ds) {
     throw new Error(
@@ -28,12 +30,12 @@ export function lstop(obj: Object) {
   _disposers.delete(obj);
 }
 
+/** Disposer that calls unsubscribe(). Use with RxJS subscriptions */
 export function lunsub<T extends { unsubscribe: () => void }>(
   obj: Object,
   ...obs: T[]
-) {
+): void {
   for (const o of obs) {
     addOrSet(obj, () => o.unsubscribe());
   }
-  return obs;
 }
