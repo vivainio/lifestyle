@@ -1,0 +1,13 @@
+{
+  "name": "lifestyle",
+  "version": "1.0.0",
+  "description": "Objects life cycle manager (e.g. for Angular)",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "microbundle",
+    "dev": "microbundle watch"
+  },
+  "author": "vivainio",
+  "license": "MIT"
+}
