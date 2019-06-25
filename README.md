@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/lifestyle.svg)](https://badge.fury.io/js/lifestyle)
-
+[![Build Status](https://dev.azure.com/ville0567/ville/_apis/build/status/vivainio.lifestyle?branchName=master)](https://dev.azure.com/ville0567/ville/_build/latest?definitionId=11&branchName=master)
 # lifestyle
 
 JS object life cycle management helper. Best used with Angular. 
@@ -46,7 +46,7 @@ ngOnDestroy() {
 
 ## How it works
 
-It stores all pushed disposers to in a WeakMap associated with passed "this". Full
+It stores all pushed disposers in a WeakMap associated with the passed "this". Full
 implementation is https://github.com/vivainio/lifestyle/blob/master/src/index.ts.
 
 This is more convenient and harder to screw up than `takeUntil(this.destroy$)` pattern,
