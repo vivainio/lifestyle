@@ -10,5 +10,8 @@
     "dev": "microbundle watch"
   },
   "author": "vivainio",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
 }
