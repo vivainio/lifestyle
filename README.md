@@ -1,5 +1,5 @@
 [![npm version](https://badge.fury.io/js/lifestyle.svg)](https://badge.fury.io/js/lifestyle)
-
+[![Build Status](https://dev.azure.com/ville0567/ville/_apis/build/status/vivainio.lifestyle?branchName=master)](https://dev.azure.com/ville0567/ville/_build/latest?definitionId=11&branchName=master)
 # lifestyle
 
 JS object life cycle management helper. Best used with Angular. 
