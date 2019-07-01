@@ -30,7 +30,7 @@ export function ldisposer(obj: Object, disp: Disposer): void {
 export function lwrap(
   obj: Object,
   creator: (e: Expression) => Disposer,
-  postCall: () => void,
+  postCall: Expression,
 ) {
   const maker = function(fn: () => void) {
     const wrapFn = function() {

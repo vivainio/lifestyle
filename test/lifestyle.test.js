@@ -48,7 +48,6 @@ test("lwrap works", () => {
 
   expect(postopCount).toEqual(1);
   expect(payload).toEqual(true);
-  expect(disposerCalled).toEqual(false);
   let pl2 = false;
   w(() => {
     pl2 = true;
@@ -56,6 +55,7 @@ test("lwrap works", () => {
   expect(pl2).toEqual(true);
   expect(postopCount).toEqual(2);
 
+  expect(disposerCalled).toEqual(false);
   lstop(o);
   expect(disposerCalled).toEqual(true);
 });
