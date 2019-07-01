@@ -35,10 +35,10 @@ test("lwrap works", () => {
   let postopCount = 0;
   const w = lwrap(
     o,
+    autorun,
     () => {
       postopCount += 1;
-    },
-    autorun
+    }
   );
 
   let payload = false;
